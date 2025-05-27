@@ -1,24 +1,45 @@
+:root {
+    --main-bg-color: darkblue;
+    --main-text-color: white;
+    --heading-color: darkblue;
+    --img-border-color: black;
+    --img-shadow: 0 0 30px gray;
+    --aside-bg: #eee;
+    --aside-text: #333;
+    --aside-border: 1px solid rgb(0 0 0 / 0.2);
+    --main-max-width: 840px;
+    --aside-width: 20rem;
+    --aside-padding: 1rem;
+    --footer-border: 1px solid #000;
+    --footer-margin-top: 15px;
+    --nav-padding: 10px;
+    --nav-link-padding: 20px;
+    --img-width: 150px;
+    --img-padding: 2px;
+    --aside-img-width: 200px;
+}
+
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: var(--main-bg-color);
+    padding: var(--nav-padding);
 }
 
 nav a {
-    color: white;
+    color: var(--main-text-color);
     display: block;
-    padding: 20px;
+    padding: var(--nav-link-padding);
 }
 
 h1 {
-    color: darkblue;
+    color: var(--heading-color);
 }
 
 img {
-    width: 150px;
+    width: var(--img-width);
     height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    border: 1px solid var(--img-border-color);
+    padding: var(--img-padding);
+    box-shadow: var(--img-shadow);
 }
 
 p {
@@ -26,31 +47,31 @@ p {
 }
 
 main {
-    max-width: 840;
+    max-width: var(--main-max-width);
 }
 
 aside { 
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2); /* 1️⃣ */
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
+    width: var(--aside-width);
+    margin: var(--aside-padding);
+    border: var(--aside-border); /* 1️⃣ */
+    padding: var(--aside-padding);
+    background-color: var(--aside-bg);
+    color: var(--aside-text);
     text-align: center;
 }
 
 aside img {
-    width: 200px;
+    width: var(--aside-img-width);
     height: auto;
 }
 
 main img {
-    width: 150px;
+    width: var(--img-width);
     height: auto;
 }
 
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
+    margin-top: var(--footer-margin-top);
+    border-top: var(--footer-border);
     text-align: center;
 }
