@@ -7,10 +7,9 @@
     --white: #ffffff;
 }
 
-
 /* Reset and Base Styles */
 
-•⁠  ⁠{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,37 +19,63 @@ body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    background: var(--white);
 }
-
 
 /* Header Styles */
 
 header {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
     background-color: var(--primary-color);
     color: var(--accent2-color);
     padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 2rem;
 }
 
 .logo {
     height: 60px;
     width: auto;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* Navigation Styles */
+nav {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
 }
 
 nav a {
     color: var(--accent2-color);
     text-decoration: none;
-    margin: 0 1rem;
     font-weight: 600;
+    font-size: 1.15rem;
+    font-family: 'Open Sans', sans-serif;
     transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
 nav a:hover {
     color: var(--accent1-color);
+    background-color: var(--white);
 }
-
 
 /* Hero Section */
 
@@ -69,15 +94,17 @@ nav a:hover {
 h1 {
     position: absolute;
     top: 20px;
+    left: 0;
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.85;
     background-color: var(--accent1-color);
     color: #fff;
     font-family: 'Merriweather', serif;
     font-size: 2.5rem;
     font-weight: 700;
+    z-index: 2;
 }
 
 .hero article {
@@ -85,10 +112,13 @@ h1 {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.93);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
 }
 
 .hero article img {
@@ -105,8 +135,8 @@ h1 {
 .hero article p {
     font-size: 1.1rem;
     line-height: 1.8;
+    flex: 1;
 }
-
 
 /* Main Content */
 
@@ -116,8 +146,20 @@ main {
     padding: 2rem;
 }
 
-section {
+.history-section {
     margin: 3rem 0;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .history-content {
+        grid-template-columns: 1fr;
+    }
 }
 
 h2 {
@@ -135,53 +177,69 @@ section p {
     margin-bottom: 1.5rem;
 }
 
-
 /* Adventure Images */
 
 .adventure-images {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.2rem;
     margin-top: 2rem;
+}
+
+.adventure-images figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    padding: 0.6rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
 }
 
 .adventure-images img {
     width: 100%;
-    height: 200px;
+    height: 160px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-radius: 7px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.adventure-images img:hover {
-    transform: scale(1.05);
+.adventure-images figcaption {
+    margin-top: 0.6rem;
+    color: var(--accent2-color);
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
 }
-
 
 /* Footer */
 
 footer {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 2rem;
-    text-align: center;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 footer p {
-    margin-bottom: 1rem;
+    margin: 0;
     font-size: 1.1rem;
 }
 
 .socialmedia {
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 1rem;
+    margin-left: auto;
 }
 
 .socialmedia a {
     display: inline-block;
     transition: transform 0.3s ease;
+    text-decoration: none;
 }
 
 .socialmedia a:hover {
@@ -196,19 +254,21 @@ footer p {
     padding: 5px;
 }
 
-
 /* Responsive Design */
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 1rem;
+        text-align: center;
+        padding: 1rem 0.5rem;
     }
-    nav a {
-        margin: 0 0.5rem;
+    nav ul {
+        gap: 1rem;
+        justify-content: center;
     }
-    h1 {
-        font-size: 2rem;
+    .logo {
+        margin: 0 auto;
     }
     .hero {
         height: auto;
@@ -217,6 +277,9 @@ footer p {
     .hero article {
         position: static;
         margin-top: 2rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     .hero article img {
         float: none;
@@ -224,9 +287,19 @@ footer p {
         margin: 0 auto 1rem auto;
     }
     .adventure-images {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
     main {
         padding: 1rem;
+    }
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .socialmedia {
+        margin-left: 0;
+        justify-content: center;
     }
 }
