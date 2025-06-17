@@ -1,182 +1,199 @@
-/* ...existing CSS... (above this, keep all your header, footer, and shared styles) */
-
-/* Contact Main Layout */
-.contact-main {
-    max-width: 1100px;
+/* Home Main Layout */
+.home-main {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem;
 }
 
-/* Contact Info Section */
-.contact-company-info .company-details {
-    display: flex;
-    flex-wrap: wrap;
+.hero-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     gap: 2rem;
-    align-items: flex-start;
-    justify-content: space-between;
+    margin-bottom: 3rem;
 }
-
-.contact-company-info .map-container {
-    flex: 1 1 350px;
-    min-width: 300px;
-    max-width: 450px;
-}
-
-.contact-company-info iframe {
+.hero-img {
     width: 100%;
-    height: 220px;
-    border-radius: 8px;
-    border: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    object-fit: cover;
+    border-radius: 12px;
+    grid-column: 1/2;
+    height: 350px;
 }
-
-/* Staff section */
-.contact-staff .staff-profiles {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin: 2rem 0;
-}
-
-.staff-profiles figure {
+.hero-message {
+    grid-column: 2/3;
+    background-color: rgba(255,255,255,0.97);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: var(--secondary-color);
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    flex: 1 1 200px;
-    max-width: 220px;
+    gap: 1.1rem;
 }
-
-.staff-profiles img {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    border: 3px solid var(--accent2-color);
-}
-
-.staff-profiles figcaption {
+.hero-message .cta-btn {
+    background-color: var(--primary-color);
     color: var(--white);
-    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 0.85em 1.5em;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.15rem;
+    transition: background-color 0.3s;
+}
+.hero-message .cta-btn:hover { background-color: var(--accent1-color); }
+
+.newsletter-section {
+    background-color: var(--accent2-color);
+    border-radius: 10px;
+    margin: 2rem 0;
+    padding: 2rem 1rem;
     text-align: center;
 }
-
-.staff-profiles span {
-    font-size: 0.95rem;
-    color: var(--accent2-color);
-}
-
-/* Contact Form */
-.contact-form-section {
-    margin: 2.5rem 0;
-}
-.contact-form {
+.newsletter-form {
     display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    background: var(--accent2-color);
-    padding: 2rem 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    max-width: 600px;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    margin-top: 1rem;
 }
-
-.contact-form label,
-.contact-form legend {
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 0.3rem;
-    font-family: 'Open Sans', sans-serif;
+.newsletter-form label {
+    flex-basis: 100%;
+    text-align: left;
+    font-weight: bold;
+    color: var(--secondary-color);
 }
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
     padding: 0.7rem;
     border-radius: 5px;
     border: 1px solid #bbb;
     font-size: 1rem;
-    font-family: 'Open Sans', sans-serif;
-    background: var(--white);
-    color: var(--text-color);
+    width: 210px;
 }
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.contact-form fieldset {
-    border: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.contact-form input[type="radio"] {
-    margin-right: 0.5em;
-}
-
-.checkbox-label {
-    font-weight: 400;
-    color: var(--text-color);
-    font-size: 0.98rem;
-}
-
-.contact-form .submit-btn {
-    background: var(--primary-color);
+.newsletter-form button {
+    background-color: var(--primary-color);
     color: var(--white);
-    font-size: 1.13rem;
-    font-weight: 700;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
-    padding: 0.9em 0;
+    padding: 0.7em 2em;
     cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 0.7rem;
+    font-size: 1.08rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
 }
-.contact-form .submit-btn:hover,
-.contact-form .submit-btn:focus {
-    background: var(--accent1-color);
+.newsletter-form button:hover { background-color: var(--accent1-color); }
+
+.home-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+.purpose, .offerings {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: var(--secondary-color);
     color: var(--white);
+    border-radius: 10px;
+    padding: 1.7rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.purpose img, .offerings img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid var(--accent2-color);
 }
 
-/* Footer - Wireframe link only on contact page */
-footer .wireframe-link {
-    margin-top: 1.2rem;
-    text-align: right;
+/* Trips Page */
+.trips-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+.trips-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.trip-card {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.trip-card img {
     width: 100%;
+    max-width: 250px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid var(--accent2-color);
 }
-
-footer .wireframe-link a {
-    color: var(--accent2-color);
-    text-decoration: underline;
-    font-size: 1rem;
-}
-
-footer .wireframe-link a:hover {
+.trip-card .trip-btn {
+    background-color: var(--primary-color);
     color: var(--white);
-    background: var(--accent1-color);
-    transition: background 0.2s, color 0.2s;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7em 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+.trip-card .trip-btn:hover { background-color: var(--accent1-color); }
+
+.trips-table-section {
+    margin: 3rem auto 2rem auto;
+    max-width: 700px;
+}
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.trips-table th, .trips-table td {
+    border: 1px solid #ccc;
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+}
+.trips-table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.trips-table tr:nth-child(even) td {
+    background-color: #f1f1f1;
+    color: var(--secondary-color);
 }
 
 /* Responsive */
 @media (max-width: 900px) {
-    .staff-profiles {
-        flex-direction: column;
-        align-items: center;
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
-    .contact-company-info .company-details {
-        flex-direction: column;
+    .home-content-grid {
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    .contact-form {
-        max-width: 100%;
+    .purpose, .offerings {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

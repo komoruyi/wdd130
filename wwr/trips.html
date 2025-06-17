@@ -1,67 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Explore our white water rafting trips for families, groups, and adventurers.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rafting Adventures | Trips</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips | Rapids Adventure Company - White Water Rafting</title>
+    <meta name="description" content="Discover exciting rafting trips for all skill levels with Rapids Adventure Company. Find trip details, compare options, and book your next adventure today!">
+    <meta name="author" content="Kenneth Omoruyi">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
-  <header>
-    <nav class="nav">
-      <a href="index.html" class="logo">Rafting Adventures</a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="trips.html" aria-current="page">Trips</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="trips-hero">
-      <h1>Our Rafting Trips</h1>
-      <p>Choose from a variety of adventures suitable for all experience levels.</p>
-    </section>
-    <section class="trips-list grid">
-      <article class="trip-card">
-        <img src="images/family-trip.jpg" alt="Family Rafting Trip">
-        <h2>Family Fun Float</h2>
-        <p>Perfect for families and beginners. Enjoy a scenic float with mild rapids and plenty of wildlife spotting.</p>
-        <ul>
-          <li>Duration: 2 hours</li>
-          <li>Difficulty: Easy</li>
-          <li>Price: $50 per person</li>
-        </ul>
-        <a href="contact.html" class="cta-button">Book Now</a>
-      </article>
-      <article class="trip-card">
-        <img src="images/adventure-trip.jpg" alt="Adventure Rafting Trip">
-        <h2>Adrenaline Rush</h2>
-        <p>For thrill-seekers! Tackle Class III-IV rapids on a river adventure you’ll never forget.</p>
-        <ul>
-          <li>Duration: 4 hours</li>
-          <li>Difficulty: Intermediate</li>
-          <li>Price: $90 per person</li>
-        </ul>
-        <a href="contact.html" class="cta-button">Book Now</a>
-      </article>
-      <article class="trip-card">
-        <img src="images/extreme-trip.jpg" alt="Extreme Rafting Trip">
-        <h2>Extreme Expedition</h2>
-        <p>Our longest and most challenging trip. For experienced rafters only—conquer the wildest rapids!</p>
-        <ul>
-          <li>Duration: Full day</li>
-          <li>Difficulty: Advanced</li>
-          <li>Price: $150 per person</li>
-        </ul>
-        <a href="contact.html" class="cta-button">Book Now</a>
-      </article>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Rapids Adventure Company - Kenneth Omoruyi</p>
-  </footer>
+    <header>
+        <img src="images/logo.png" alt="White Water Rafting Logo" class="logo">
+        <h1 class="site-title">Rapids Adventure Company</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="trips-main">
+        <section class="trips-intro">
+            <h2>Choose Your Adventure!</h2>
+            <p>Browse our most popular white water rafting trips below. Whether you're a beginner or thrill-seeker, we have the perfect trip for you. Click "Book Now" to contact us and reserve your spot!</p>
+        </section>
+        <section class="trips-grid">
+            <div class="trip-card">
+                <img src="images/trip1.jpg" alt="Los Dientes del Diablo Rapids">
+                <h3>Los Dientes del Diablo</h3>
+                <p>Our most challenging run! Brave Class V rapids, stunning canyon scenery, and a day packed with adventure. Must be 16+ and a strong swimmer.</p>
+                <a href="contact.html" class="trip-btn">Book Now</a>
+            </div>
+            <div class="trip-card">
+                <img src="images/trip2.jpg" alt="Big Mallard Rapids">
+                <h3>Big Mallard Adventure</h3>
+                <p>Perfect for families and beginners. Enjoy gentle Class II-III rapids, wildlife views, and a riverside lunch. Ages 8 and up welcome!</p>
+                <a href="contact.html" class="trip-btn">Book Now</a>
+            </div>
+            <div class="trip-card">
+                <img src="images/trip3.jpg" alt="Half Day Adventure">
+                <h3>Half Day Adventure</h3>
+                <p>Short on time? Our half-day trip features beautiful views and moderate Class III-IV rapids. Morning and afternoon departures available.</p>
+                <a href="contact.html" class="trip-btn">Book Now</a>
+            </div>
+        </section>
+        <section class="trips-table-section">
+            <h3>Compare Our Trips</h3>
+            <table class="trips-table">
+                <thead>
+                    <tr>
+                        <th>Trip Name</th>
+                        <th>Difficulty</th>
+                        <th>Duration</th>
+                        <th>Min. Age</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Los Dientes del Diablo</td>
+                        <td>Class V (Expert)</td>
+                        <td>Full Day</td>
+                        <td>16</td>
+                        <td>$180</td>
+                    </tr>
+                    <tr>
+                        <td>Big Mallard Adventure</td>
+                        <td>Class II-III (Beginner)</td>
+                        <td>Full Day</td>
+                        <td>8</td>
+                        <td>$120</td>
+                    </tr>
+                    <tr>
+                        <td>Half Day Adventure</td>
+                        <td>Class III-IV (Intermediate)</td>
+                        <td>Half Day</td>
+                        <td>12</td>
+                        <td>$90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Rapids Adventure Company - Kenneth Omoruyi</p>
+        <div class="socialmedia">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebookm.jpeg" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitterm.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagramm.jpeg" alt="Instagram">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
